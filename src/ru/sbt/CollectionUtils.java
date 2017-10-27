@@ -23,11 +23,11 @@ public class CollectionUtils {
         return result;
     }
 
-    public static<E> void addAll(List<E> source, List<E> destination){
+    public static<E> void addAll(List<? extends E> source, List<? super E> destination){
         destination.addAll(source);
     }
 
-    public static<E> E max(List<E> list, Comparator<E> comparator){
+    public static<E> E max(List<? extends  E> list, Comparator<? super E> comparator){
         E max = list.get(0);
         for (E i: list){
             if (comparator.compare(i, max) > 0){
