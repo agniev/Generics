@@ -55,6 +55,7 @@ public class Main {
     }
 
     private static void testComparator() {
+
         Person maxPerson = CollectionUtils.max(Arrays.asList(
                 new Person(10),
                 new Person(15)),
