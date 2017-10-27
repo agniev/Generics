@@ -55,8 +55,6 @@ public class Main {
     }
 
     private static void testComparator() {
-        //        Integer maxInteger = CollectionUtils.max(Arrays.asList(1,2,3));
-
         Person maxPerson = CollectionUtils.max(Arrays.asList(
                 new Person(10),
                 new Person(15)),
