@@ -13,10 +13,17 @@ import static ru.sbt.CollectionUtils.nonNull;
 public class Main {
     public static void main(String[] args) {
 //        testSimpleCollection();
-//        testCompare();
+//        testCompareTo();
+//        testComparator();
 //        testNonNull();
 //        testJoin();
         testAddAll();
+    }
+
+    private static void testCompareTo() {
+        Person a = new Person(10);
+        Person b = new Person(15);
+        System.out.println("a ? b: "+ a.compareTo(b));
     }
 
     private static void testJoin() {
@@ -47,7 +54,7 @@ public class Main {
         System.out.println("nonNull: "+ z);
     }
 
-    private static void testCompare() {
+    private static void testComparator() {
         //        Integer maxInteger = CollectionUtils.max(Arrays.asList(1,2,3));
 
         Person maxPerson = CollectionUtils.max(Arrays.asList(
@@ -60,7 +67,7 @@ public class Main {
                     }
                 });
 
-        System.out.println(maxPerson.getAge());
+        System.out.println("maxPerson age: " + maxPerson.getAge());
     }
 
     private static void testSimpleCollection() {
